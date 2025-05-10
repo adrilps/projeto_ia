@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public enemy[] enemies;
-    public character character;
+    public Enemy[] enemies;
+    public Character character;
     public Transform pellets;
 
     public int score { get; private set; }
@@ -17,10 +17,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (this.lives >= 0 && Input.GetKeyDown(KeyCode.Space))
-        {
-            NewGame();
-        }
+        //if (this.lives >= 0 && Input.GetKeyDown(KeyCode.Space))
+        //{
+            //NewGame();
+        //}
     }
 
     private void NewGame()
@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
         this.character.gameObject.SetActive(false);
     }
 
-    public void EnemyEaten(enemy Enemy)
+    public void EnemyEaten(Enemy Enemy)
     {
         SetScore(this.score + 1);
         SetLives(this.lives + 1);

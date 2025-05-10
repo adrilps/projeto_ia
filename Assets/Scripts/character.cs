@@ -2,7 +2,7 @@ using UnityEngine;
 
 [RequireComponent (typeof(Rigidbody2D))]
 
-public class character : MonoBehaviour
+public class Character : MonoBehaviour
 {
 
     public Rigidbody2D Rigidbody2d { get; private set; }
