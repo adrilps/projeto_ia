@@ -30,10 +30,10 @@ public class Node : MonoBehaviour
             availableDirections.Add(direction);
         }
     }
-    /*private void OnDrawGizmos(){
+    private void OnDrawGizmos(){
         Gizmos.color = Color.red;
         foreach(Node neighbor in neighbors){
             Gizmos.DrawLine(transform.position, neighbor.transform.position);
         }
-    }*/
+    }
 }
