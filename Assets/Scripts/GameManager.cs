@@ -15,6 +15,14 @@ public class GameManager : MonoBehaviour
         NewGame();        
     }
 
+    private void Update()
+    {
+        if (this.lives >= 0 && Input.GetKeyDown(KeyCode.Space))
+        {
+            NewGame();
+        }
+    }
+
     private void NewGame()
     {
         SetScore(0);
@@ -40,6 +48,36 @@ public class GameManager : MonoBehaviour
         }
 
         this.character.gameObject.SetActive(true);
+    }
+
+    private void GameOver()
+    {
+        for (int i = 0; i < this.enemies.Length; i++)
+        {
+            this.enemies[i].gameObject.SetActive(false);
+        }
+
+        this.character.gameObject.SetActive(false);
+    }
+
+    public void EnemyEaten(enemy Enemy)
+    {
+        SetScore(this.score + 1);
+        SetLives(this.lives + 1);
+    }
+
+    public void CharacterEaten()
+    {
+        this.character.gameObject.SetActive(false);
+        SetLives(this.lives - 1);
+        if (this.lives > 0)
+        {
+            Invoke(nameof(ResetState), 3.0f);
+        }
+        else
+        {
+            GameOver();
+        }
     }
 
     private void SetScore (int score)
