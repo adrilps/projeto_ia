@@ -4839,8 +4839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c50b9b727385ab54d83f27a9b07c7ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 628811267}
-  animator: {fileID: 628811261}
+  deathSequence: {fileID: 0}
 --- !u!58 &628811265
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5167,8 +5166,11 @@ MonoBehaviour:
   - {fileID: 474391194}
   - {fileID: 1462901468}
   - {fileID: 313044804}
-  character: {fileID: 628811264}
+  player: {fileID: 628811264}
   pellets: {fileID: 1208041828}
+  gameOverText: {fileID: 0}
+  scoreText: {fileID: 0}
+  livesText: {fileID: 0}
 --- !u!4 &733609575
 Transform:
   m_ObjectHideFlags: 0
@@ -9252,6 +9254,10 @@ PrefabInstance:
       propertyPath: outside
       value: 
       objectReference: {fileID: 1084057480}
+    - target: {fileID: 3765419523508015153, guid: 1e6376709c574994b8fd4320ceb88c57, type: 3}
+      propertyPath: initialDirection.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4382211706097709173, guid: 1e6376709c574994b8fd4320ceb88c57, type: 3}
       propertyPath: m_Name
       value: Ghost_Inky
@@ -9340,6 +9346,10 @@ PrefabInstance:
     - target: {fileID: 2966560364519716271, guid: 93f07cc941c4c104c971012b499a9b1d, type: 3}
       propertyPath: m_Name
       value: Ghost_Clyde
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150132098140026029, guid: 93f07cc941c4c104c971012b499a9b1d, type: 3}
+      propertyPath: initialDirection.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5410046759349519267, guid: 93f07cc941c4c104c971012b499a9b1d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9537,6 +9547,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4883537582062203404, guid: 0e6d48706f9c3894ab9d19dbd53fb222, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6135609938789045189, guid: 0e6d48706f9c3894ab9d19dbd53fb222, type: 3}
+      propertyPath: initialDirection.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6329270882360251265, guid: 0e6d48706f9c3894ab9d19dbd53fb222, type: 3}

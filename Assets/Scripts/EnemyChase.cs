@@ -10,6 +10,9 @@ public class EnemyChase : EnemyBehavior
     [SerializeField] private bool useGreedySearch = false; // Flag para escolher o algoritmo de busca
     private float lastPathUpdateTime;
     private const float PATH_TIMEOUT = 1f; // Tempo em segundos para limpar o caminho se não houver atualizações
+    private Vector2Int lastCell;
+    private float stuckTimer = 0f;
+    private float stuckThreshold = 0.5f;
 
     private void OnDisable()
     {
@@ -36,6 +39,24 @@ public class EnemyChase : EnemyBehavior
 
     private void Update()
     {
+        Vector2 pos = enemy.movement.rb.position;
+        Vector2Int currentCell = new Vector2Int(Mathf.FloorToInt(pos.x), Mathf.FloorToInt(pos.y));
+
+        if (currentCell == lastCell)
+        {
+            stuckTimer += Time.deltaTime;
+            if (stuckTimer > stuckThreshold)
+            {
+                TryUnstuckFromNode();
+                stuckTimer = 0f;
+            }
+        }
+        else
+        {
+            stuckTimer = 0f;
+            lastCell = currentCell;
+        }
+
         // Verifica se o fantasma está preso em um nó
         if (lastNode != null && Time.time - timeAtLastNode > MAX_TIME_AT_NODE)
         {
@@ -161,5 +182,34 @@ public class EnemyChase : EnemyBehavior
             return diff.x > 0 ? Vector2.right : Vector2.left;
         else
             return diff.y > 0 ? Vector2.up : Vector2.down;
+    }
+
+    private void TryUnstuckFromNode()
+    {
+        // Tenta encontrar o Node mais próximo (bifurcação)
+        Node[] allNodes = FindObjectsByType<Node>(FindObjectsSortMode.None);
+        Node closest = null;
+        float minDistance = float.MaxValue;
+        Vector2 pos = enemy.movement.rb.position;
+
+        foreach (Node node in allNodes)
+        {
+            float dist = Vector2.Distance(pos, node.transform.position);
+            if (dist < minDistance)
+            {
+                minDistance = dist;
+                closest = node;
+            }
+        }
+
+        if (closest != null && minDistance < 1.0f) // só tenta se estiver perto de um nó
+        {
+            var available = closest.availableDirections;
+            if (available.Count > 0)
+            {
+                Vector2 randomDir = available[Random.Range(0, available.Count)];
+                enemy.movement.SetDirection(randomDir, true);
+            }
+        }
     }
 }

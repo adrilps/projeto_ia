@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\EnemyBehavior.cs" />
     <Compile Include="Assets\Scripts\EnemyGizmos.cs" />
+    <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\EnemyBlinky.cs" />
     <Compile Include="Assets\Scripts\InkyGizmos.cs" />
     <Compile Include="Assets\Scripts\Pellet.cs" />
@@ -61,16 +62,15 @@
     <Compile Include="Assets\Scripts\AnimatedSprite.cs" />
     <Compile Include="Assets\Scripts\PathNode.cs" />
     <Compile Include="Assets\Scripts\EnemyPinky.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Node.cs" />
     <Compile Include="Assets\Scripts\EnemyInky.cs" />
     <Compile Include="Assets\Scripts\PowerPellet.cs" />
-    <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\Scripts\AStar.cs" />
     <Compile Include="Assets\Scripts\EnemyFrightened.cs" />
     <Compile Include="Assets\Scripts\BlinkyGizmos.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\character.cs" />
     <Compile Include="Assets\Scripts\EnemyChase.cs" />
     <Compile Include="Assets\Scripts\ClydeGizmos.cs" />
   </ItemGroup>

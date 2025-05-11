@@ -1,63 +1,60 @@
-using UnityEditor.Animations;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-
+[RequireComponent(typeof(Movement))]
 public class Character : MonoBehaviour
 {
-    public Movement movement;
-    public Animator animator;
-    private Vector2 direction;
-    private Vector3 right = new Vector3(1f, 1f, 1f);
-    private Vector3 left = new Vector3(-1f, 1f, 1f);
+    [SerializeField]
+    private AnimatedSprite deathSequence;
+    private SpriteRenderer spriteRenderer;
+    private CircleCollider2D circleCollider;
+    private Movement movement;
 
     private void Awake()
     {
-        this.movement = GetComponent<Movement>();
-        this.animator = GetComponent<Animator>();
-        this.direction = this.movement.direction;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        circleCollider = GetComponent<CircleCollider2D>();
+        movement = GetComponent<Movement>();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            this.movement.SetDirection(Vector2.up);
+        // Set the new direction based on the current input
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
+            movement.SetDirection(Vector2.up);
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            this.movement.SetDirection(Vector2.down);
+        else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
+            movement.SetDirection(Vector2.down);
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            this.movement.SetDirection(Vector2.left);
+        else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
+            movement.SetDirection(Vector2.left);
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            this.movement.SetDirection(Vector2.right);
+        else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
+            movement.SetDirection(Vector2.right);
         }
 
-        if (this.movement.direction != this.direction)
-        {
-            this.direction = this.movement.direction;
-            if (this.movement.direction == Vector2.up)
-            {
-                this.animator.SetBool("back", true);
-            }
-            else if (this.movement.direction == Vector2.down)
-            {
-                this.animator.SetBool("back", false);
-            }
-            else if (this.movement.direction == Vector2.left)
-            {
-                this.animator.SetBool("back", false);
-                this.gameObject.transform.localScale = left;
-            }
-            else if (this.movement.direction == Vector2.right)
-            {
-                this.movement.SetDirection(Vector2.right);
-                this.gameObject.transform.localScale = right;
-            }
-        }
+        // Rotate pacman to face the movement direction
+        float angle = Mathf.Atan2(movement.direction.y, movement.direction.x);
+        transform.rotation = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
     }
+
+    public void ResetState()
+    {
+        enabled = true;
+        spriteRenderer.enabled = true;
+        circleCollider.enabled = true;
+        deathSequence.enabled = false;
+        movement.ResetState();
+        gameObject.SetActive(true);
+    }
+
+    public void DeathSequence()
+    {
+        enabled = false;
+        spriteRenderer.enabled = false;
+        circleCollider.enabled = false;
+        movement.enabled = false;
+        deathSequence.enabled = true;
+        deathSequence.Restart();
+    }
+
 }
