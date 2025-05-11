@@ -57,9 +57,9 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Pacman"))
         {
             if (frightened.enabled) {
-                //GameManager.Instance.EnemyEaten(this);
+                GameManager.Instance.EnemyEaten(this);
             } else {
-                //GameManager.Instance.PacmanEaten();
+                GameManager.Instance.CharacterEaten();
             }
         }
     }

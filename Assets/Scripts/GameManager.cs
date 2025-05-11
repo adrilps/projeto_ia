@@ -1,10 +1,11 @@
- using System;
+using System;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; private set; }
     public Enemy[] enemies;
     public Character character;
     public Transform pellets;
@@ -14,14 +15,31 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        NewGame();        
+        NewGame();
     }
-
+    public void Awake()
+    {
+        if (Instance != null)
+        {
+            DestroyImmediate(gameObject);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+    public void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
+    }
     private void Update()
     {
         //if (this.lives >= 0 && Input.GetKeyDown(KeyCode.Space))
         //{
-            //NewGame();
+        //NewGame();
         //}
     }
 
@@ -89,11 +107,11 @@ public class GameManager : MonoBehaviour
         if (!HasRemainingPellets())
         {
             this.character.gameObject.SetActive(false);
-            if(MainMenu.level < 4)
+            if (MainMenu.level < 4)
             {
-            SceneManager.LoadSceneAsync(++MainMenu.level);
+                SceneManager.LoadSceneAsync(++MainMenu.level);
             }
-        
+
 
         }
     }
@@ -103,7 +121,7 @@ public class GameManager : MonoBehaviour
         PelletEaten(pellet);
     }
 
-    private void SetScore (int score)
+    private void SetScore(int score)
     {
         this.score = score;
     }

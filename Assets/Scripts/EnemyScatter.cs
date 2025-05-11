@@ -4,7 +4,10 @@ public class EnemyScatter : EnemyBehavior
 {
     private void OnDisable()
     {
-        enemy.chase.Enable();
+        if (enemy != null && enemy.chase != null)
+        {
+            enemy.chase.Enable();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

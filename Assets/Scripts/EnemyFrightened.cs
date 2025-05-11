@@ -51,14 +51,23 @@ public class EnemyFrightened : EnemyBehavior
 
     private void OnEnable()
     {
-        blue.GetComponent<AnimatedSprite>().Restart();
-        enemy.movement.speedMultiplier = 0.5f;
+        if (blue != null)
+        {
+            blue.GetComponent<AnimatedSprite>().Restart();
+        }
+        if (enemy != null && enemy.movement != null)
+        {
+            enemy.movement.speedMultiplier = 0.5f;
+        }
         eaten = false;
     }
 
     private void OnDisable()
     {
-        enemy.movement.speedMultiplier = 1f;
+        if (enemy != null && enemy.movement != null)
+        {
+            enemy.movement.speedMultiplier = 1f;
+        }
         eaten = false;
     }
 

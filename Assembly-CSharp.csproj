@@ -55,6 +55,7 @@
     <Compile Include="Assets\Scripts\EnemyScatter.cs" />
     <Compile Include="Assets\Scripts\EnemyHome.cs" />
     <Compile Include="Assets\Scripts\EnemyClyde.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\GreedySearch.cs" />
     <Compile Include="Assets\Scripts\PinkyGizmos.cs" />
     <Compile Include="Assets\Scripts\AnimatedSprite.cs" />
@@ -72,7 +73,6 @@
     <Compile Include="Assets\Scripts\character.cs" />
     <Compile Include="Assets\Scripts\EnemyChase.cs" />
     <Compile Include="Assets\Scripts\ClydeGizmos.cs" />
-    <Compile Include="Assets\Scripts\enemy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
