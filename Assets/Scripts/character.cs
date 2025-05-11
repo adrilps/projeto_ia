@@ -8,17 +8,22 @@ public class Character : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private CircleCollider2D circleCollider;
     private Movement movement;
+    private Animator animator;
+    private Vector3 right = new Vector3(1f, 1f, 1f);
+    private Vector3 left = new Vector3(-1f, 1f, 1f);
+    private Vector2 direction = Vector2.zero;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         circleCollider = GetComponent<CircleCollider2D>();
         movement = GetComponent<Movement>();
+        animator = GetComponent<Animator>();
+        
     }
 
     private void Update()
     {
-        // Set the new direction based on the current input
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
             movement.SetDirection(Vector2.up);
         }
@@ -32,9 +37,29 @@ public class Character : MonoBehaviour
             movement.SetDirection(Vector2.right);
         }
 
-        // Rotate pacman to face the movement direction
-        float angle = Mathf.Atan2(movement.direction.y, movement.direction.x);
-        transform.rotation = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
+
+         if (this.movement.direction != this.direction)
+        {
+            this.direction = this.movement.direction;
+            if (this.movement.direction == Vector2.up)
+            {
+                this.animator.SetBool("back", true);
+            }
+            else if (this.movement.direction == Vector2.down)
+            {
+                this.animator.SetBool("back", false);
+            }
+            else if (this.movement.direction == Vector2.left)
+            {
+                this.animator.SetBool("back", false);
+                this.gameObject.transform.localScale = left;
+            }
+            else if (this.movement.direction == Vector2.right)
+            {
+                this.movement.SetDirection(Vector2.right);
+                this.gameObject.transform.localScale = right;
+            }
+        }
     }
 
     public void ResetState()
