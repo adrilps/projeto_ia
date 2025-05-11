@@ -507,11 +507,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9126054451948372040, guid: 44cf0c91d32e01b46a5670b8ce1b8d4b, type: 3}
   m_PrefabInstance: {fileID: 177799989}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &231575337 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 2948027390837253069, guid: 0e6d48706f9c3894ab9d19dbd53fb222, type: 3}
-  m_PrefabInstance: {fileID: 6797875283899676584}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &237928698 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6403873851012973010, guid: 44cf0c91d32e01b46a5670b8ce1b8d4b, type: 3}
@@ -5452,11 +5447,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44cf0c91d32e01b46a5670b8ce1b8d4b, type: 3}
---- !u!212 &941287160 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 8162940642669805221, guid: cd548c23034b6cc4dbffa3e5f34f7992, type: 3}
-  m_PrefabInstance: {fileID: 3330822974958590353}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &948361675
 GameObject:
   m_ObjectHideFlags: 0
@@ -5698,11 +5688,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44cf0c91d32e01b46a5670b8ce1b8d4b, type: 3}
---- !u!212 &980133590 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 1773378348582729078, guid: 0e6d48706f9c3894ab9d19dbd53fb222, type: 3}
-  m_PrefabInstance: {fileID: 6797875283899676584}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &997892150
 GameObject:
   m_ObjectHideFlags: 0
@@ -5918,16 +5903,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1124897108 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 1476584430213531024, guid: cd548c23034b6cc4dbffa3e5f34f7992, type: 3}
-  m_PrefabInstance: {fileID: 3330822974958590353}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &1194045022 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 275344790168525142, guid: 0e6d48706f9c3894ab9d19dbd53fb222, type: 3}
-  m_PrefabInstance: {fileID: 6797875283899676584}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1208041827
 GameObject:
   m_ObjectHideFlags: 0
@@ -8352,11 +8327,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44cf0c91d32e01b46a5670b8ce1b8d4b, type: 3}
---- !u!212 &1506776618 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 6931109710821013419, guid: cd548c23034b6cc4dbffa3e5f34f7992, type: 3}
-  m_PrefabInstance: {fileID: 3330822974958590353}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1591830800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9183,25 +9153,13 @@ PrefabInstance:
       propertyPath: outside
       value: 
       objectReference: {fileID: 1084057480}
-    - target: {fileID: 4655946797812588071, guid: cd548c23034b6cc4dbffa3e5f34f7992, type: 3}
-      propertyPath: blue
-      value: 
-      objectReference: {fileID: 1506776618}
-    - target: {fileID: 4655946797812588071, guid: cd548c23034b6cc4dbffa3e5f34f7992, type: 3}
-      propertyPath: body
-      value: 
-      objectReference: {fileID: 941287160}
-    - target: {fileID: 4655946797812588071, guid: cd548c23034b6cc4dbffa3e5f34f7992, type: 3}
-      propertyPath: white
-      value: 
-      objectReference: {fileID: 1124897108}
+    - target: {fileID: 1723142474118846610, guid: cd548c23034b6cc4dbffa3e5f34f7992, type: 3}
+      propertyPath: gizmosRadius
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5055125021723500976, guid: cd548c23034b6cc4dbffa3e5f34f7992, type: 3}
       propertyPath: m_Radius
       value: 0.44430465
-      objectReference: {fileID: 0}
-    - target: {fileID: 5055125021723500976, guid: cd548c23034b6cc4dbffa3e5f34f7992, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5055125021723500976, guid: cd548c23034b6cc4dbffa3e5f34f7992, type: 3}
       propertyPath: m_Offset.y
@@ -9276,6 +9234,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 141144295272810526, guid: 1e6376709c574994b8fd4320ceb88c57, type: 3}
+      propertyPath: gizmosRadius
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1165451975511061591, guid: 1e6376709c574994b8fd4320ceb88c57, type: 3}
       propertyPath: target
       value: 
@@ -9332,10 +9294,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6093840993986011311, guid: 1e6376709c574994b8fd4320ceb88c57, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6947913502795574442, guid: 1e6376709c574994b8fd4320ceb88c57, type: 3}
       propertyPath: blinky
       value: 
@@ -9373,13 +9331,13 @@ PrefabInstance:
       propertyPath: scatterCorner.y
       value: -5.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1438136712909832083, guid: 93f07cc941c4c104c971012b499a9b1d, type: 3}
+      propertyPath: distanceThreshold
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2966560364519716271, guid: 93f07cc941c4c104c971012b499a9b1d, type: 3}
       propertyPath: m_Name
       value: Ghost_Clyde
-      objectReference: {fileID: 0}
-    - target: {fileID: 4017937781618298207, guid: 93f07cc941c4c104c971012b499a9b1d, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5410046759349519267, guid: 93f07cc941c4c104c971012b499a9b1d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9523,10 +9481,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 836079057897901076, guid: 0e6d48706f9c3894ab9d19dbd53fb222, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1016248856726976088, guid: 0e6d48706f9c3894ab9d19dbd53fb222, type: 3}
       propertyPath: m_Name
       value: Ghost_Pinky
@@ -9591,18 +9545,6 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6560697390314940369, guid: 0e6d48706f9c3894ab9d19dbd53fb222, type: 3}
-      propertyPath: blue
-      value: 
-      objectReference: {fileID: 1194045022}
-    - target: {fileID: 6560697390314940369, guid: 0e6d48706f9c3894ab9d19dbd53fb222, type: 3}
-      propertyPath: body
-      value: 
-      objectReference: {fileID: 231575337}
-    - target: {fileID: 6560697390314940369, guid: 0e6d48706f9c3894ab9d19dbd53fb222, type: 3}
-      propertyPath: white
-      value: 
-      objectReference: {fileID: 980133590}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

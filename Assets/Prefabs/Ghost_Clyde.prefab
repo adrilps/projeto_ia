@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 1688533083963780052}
   - component: {fileID: 872030823692603109}
   - component: {fileID: 1438136712909832083}
+  - component: {fileID: 3690381882696515365}
   m_Layer: 7
   m_Name: Ghost_Clyde
   m_TagString: Untagged
@@ -172,9 +173,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &4017937781618298207
 CircleCollider2D:
@@ -303,8 +304,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 0
   useGreedySearch: 1
-  scatterCorner: {x: -8, y: -8}
-  distanceThreshold: 8
+  scatterCorner: {x: -8.5, y: -5.5}
+  distanceThreshold: 5
+--- !u!114 &3690381882696515365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2966560364519716271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91abc9fafd03ec14998139f001ced071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmosColor: {r: 1, g: 0, b: 0, a: 1}
+  gizmosRadius: 0.2
+  showPath: 1
+  showTarget: 1
 --- !u!1 &7802760801968188630
 GameObject:
   m_ObjectHideFlags: 0

@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 7219312394626889130}
   - component: {fileID: 5964521178292085239}
   - component: {fileID: 6947913502795574442}
+  - component: {fileID: 141144295272810526}
   m_Layer: 7
   m_Name: Ghost_Inky
   m_TagString: Untagged
@@ -172,9 +173,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &6093840993986011311
 CircleCollider2D:
@@ -304,6 +305,22 @@ MonoBehaviour:
   duration: 0
   useGreedySearch: 0
   blinky: {fileID: 0}
+--- !u!114 &141144295272810526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4382211706097709173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d0260ffee29447438fdfc91d908e763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmosColor: {r: 1, g: 0, b: 0, a: 1}
+  gizmosRadius: 0.2
+  showPath: 1
+  showTarget: 1
 --- !u!1 &5277159583980795221
 GameObject:
   m_ObjectHideFlags: 0
