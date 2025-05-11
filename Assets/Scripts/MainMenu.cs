@@ -6,7 +6,6 @@ public class MainMenu : MonoBehaviour
     public static int level = 0;
 
     public void LevelSelector(){
-        level = 1;
         SceneManager.LoadSceneAsync(1);
     }
     public void SelectLevel1()
@@ -27,12 +26,19 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadSceneAsync(4);
     }
 
-    public void LevelUp()
+    public void PlayLevel1()
     {
-        if(level < 4)
-        {
-        SceneManager.LoadSceneAsync(++level);
-        }
+        SceneManager.LoadSceneAsync(5);
+    }
+
+    public void PlayLevel2()
+    {
+        SceneManager.LoadSceneAsync(6);
+    }
+
+    public void PlayLevel3()
+    {
+        SceneManager.LoadSceneAsync(7);
     }
 
 }
