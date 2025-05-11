@@ -1,5 +1,6 @@
-using System;
+ using System;
 using UnityEngine;
+using UnityEngine.SceneManagement
 
 public class GameManager : MonoBehaviour
 {
@@ -88,6 +89,7 @@ public class GameManager : MonoBehaviour
         {
             this.character.gameObject.SetActive(false);
             Invoke(nameof(NewRound), 3.0f);
+
         }
     }
 
