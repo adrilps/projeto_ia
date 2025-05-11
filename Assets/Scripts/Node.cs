@@ -36,4 +36,13 @@ public class Node : MonoBehaviour
             Gizmos.DrawLine(transform.position, neighbor.transform.position);
         }
     }*/
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        
+        foreach (Vector2 direction in availableDirections)
+        {
+            Gizmos.DrawLine(transform.position, (Vector2)transform.position + direction);
+        }
+    }
 }
