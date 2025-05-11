@@ -62,7 +62,6 @@ public class GameManager : MonoBehaviour
 
     public void EnemyEaten(Enemy Enemy)
     {
-        SetScore(this.score + 1);
         SetLives(this.lives + 1);
     }
 
@@ -80,6 +79,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void PelletEaten(Pellet pellet)
+    {
+        pellet.gameObject.SetActive(false);
+        SetScore(score + 1);
+
+        if (!HasRemainingPellets())
+        {
+            this.character.gameObject.SetActive(false);
+            Invoke(nameof(NewRound), 3.0f);
+        }
+    }
+
+    public void PowerPelletEaten(Pellet pellet)
+    {
+        PelletEaten(pellet);
+    }
+
     private void SetScore (int score)
     {
         this.score = score;
@@ -88,5 +104,17 @@ public class GameManager : MonoBehaviour
     private void SetLives(int lives)
     {
         this.lives = lives;
+    }
+
+    private bool HasRemainingPellets()
+    {
+        foreach (Transform pellet in this.pellets)
+        {
+            if (pellet.gameObject.activeSelf)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

@@ -4732,6 +4732,7 @@ GameObject:
   - component: {fileID: 628811266}
   - component: {fileID: 628811265}
   - component: {fileID: 628811264}
+  - component: {fileID: 628811267}
   m_Layer: 6
   m_Name: player
   m_TagString: Untagged
@@ -4825,7 +4826,7 @@ Transform:
   m_GameObject: {fileID: 628811260}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09, y: -5.41, z: -0.27}
+  m_LocalPosition: {x: -0.097, y: -5.505, z: -0.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4843,13 +4844,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c50b9b727385ab54d83f27a9b07c7ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  speedmultiplier: 1
-  direcaoinicio: {x: 1, y: 0}
-  inicio: {x: 0, y: 0, z: 0}
-  paredes:
-    serializedVersion: 2
-    m_Bits: 512
+  movement: {fileID: 628811267}
+  animator: {fileID: 628811261}
 --- !u!58 &628811265
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4884,8 +4880,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.081754446}
-  m_Radius: 0.45
+  m_Offset: {x: 0, y: -0.02013278}
+  m_Radius: 0.48533845
 --- !u!50 &628811266
 Rigidbody2D:
   serializedVersion: 5
@@ -4913,6 +4909,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &628811267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628811260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ba5819b72164d34db419111d0247fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  speedMultiplier: 1
+  initialDirection: {x: 1, y: 0}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1001 &649802321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9181,6 +9195,14 @@ PrefabInstance:
       propertyPath: white
       value: 
       objectReference: {fileID: 1124897108}
+    - target: {fileID: 5055125021723500976, guid: cd548c23034b6cc4dbffa3e5f34f7992, type: 3}
+      propertyPath: m_Radius
+      value: 0.44430465
+      objectReference: {fileID: 0}
+    - target: {fileID: 5055125021723500976, guid: cd548c23034b6cc4dbffa3e5f34f7992, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.012662232
+      objectReference: {fileID: 0}
     - target: {fileID: 5782723464067437530, guid: cd548c23034b6cc4dbffa3e5f34f7992, type: 3}
       propertyPath: m_Interpolate
       value: 1
@@ -9199,11 +9221,11 @@ PrefabInstance:
       objectReference: {fileID: 628811263}
     - target: {fileID: 9219419370201791026, guid: cd548c23034b6cc4dbffa3e5f34f7992, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.18
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9219419370201791026, guid: cd548c23034b6cc4dbffa3e5f34f7992, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.72
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9219419370201791026, guid: cd548c23034b6cc4dbffa3e5f34f7992, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9349,11 +9371,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5410046759349519267, guid: 93f07cc941c4c104c971012b499a9b1d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.95
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5410046759349519267, guid: 93f07cc941c4c104c971012b499a9b1d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.61
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5410046759349519267, guid: 93f07cc941c4c104c971012b499a9b1d, type: 3}
       propertyPath: m_LocalPosition.z

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7826788010017984081}
   - component: {fileID: 6174300738767180448}
   - component: {fileID: 7616916747810330226}
+  - component: {fileID: 66460341610604939}
   m_Layer: 0
   m_Name: boxSuperPellet
   m_TagString: Untagged
@@ -134,3 +135,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &66460341610604939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6463272071676344133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c470e575ffda37b468d7e80240761a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 8

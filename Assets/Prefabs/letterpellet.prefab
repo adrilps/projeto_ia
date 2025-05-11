@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7173423334250741492}
   - component: {fileID: 718084974409190144}
   - component: {fileID: 6764902704232242970}
+  - component: {fileID: -1670535407506027454}
   m_Layer: 0
   m_Name: letterpellet
   m_TagString: Untagged
@@ -134,3 +135,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.25, y: 0.25}
   m_EdgeRadius: 0
+--- !u!114 &-1670535407506027454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8105515630350040184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ccd7e1bdeebb774f9a3c3ba865ddf34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -1,72 +1,63 @@
+using UnityEditor.Animations;
 using UnityEngine;
 
-[RequireComponent (typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D))]
 
 public class Character : MonoBehaviour
 {
-
-    public Rigidbody2D Rigidbody2d { get; private set; }
-    public float speed = 8.0f;
-    public float speedmultiplier = 1f;
-    public Vector2 direcaoinicio;
-    public Vector2 direcao {  get; private set; }
-    public Vector2 proxdirecao { get; private set; }
-    public Vector3 inicio;
-    public LayerMask paredes;
+    public Movement movement;
+    public Animator animator;
+    private Vector2 direction;
+    private Vector3 right = new Vector3(1f, 1f, 1f);
+    private Vector3 left = new Vector3(-1f, 1f, 1f);
 
     private void Awake()
     {
-        this.Rigidbody2d = GetComponent<Rigidbody2D>();
-        this.inicio = this.transform.position;
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void Start()
-    {
-        ResetState();
+        this.movement = GetComponent<Movement>();
+        this.animator = GetComponent<Animator>();
+        this.direction = this.movement.direction;
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    private void Update()
     {
-        Vector2 position = this.Rigidbody2d.position;
-        Vector2 translation = this.direcao * this.speed * this.speedmultiplier * Time.fixedDeltaTime;
-        this.Rigidbody2d.MovePosition(position +  translation);  
-    }
-
-    public void Update()
-    {
-        if (this.proxdirecao != Vector2.zero)
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            SetDirection(proxdirecao);
+            this.movement.SetDirection(Vector2.up);
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            this.movement.SetDirection(Vector2.down);
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            this.movement.SetDirection(Vector2.left);
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            this.movement.SetDirection(Vector2.right);
         }
 
-    }
-
-    public void ResetState()
-    {
-        this.speedmultiplier = 1f;
-        this.direcao = direcaoinicio;
-        this.proxdirecao = Vector2.zero;
-        this.transform.position = this.inicio;
-        this.enabled = true;
-    }
-
-    public void SetDirection(Vector2 direcao)
-    {
-        if (!Ocupado(direcao))
+        if (this.movement.direction != this.direction)
         {
-            this.direcao = direcao;
-            this.proxdirecao = Vector2.zero;
+            this.direction = this.movement.direction;
+            if (this.movement.direction == Vector2.up)
+            {
+                this.animator.SetBool("back", true);
+            }
+            else if (this.movement.direction == Vector2.down)
+            {
+                this.animator.SetBool("back", false);
+            }
+            else if (this.movement.direction == Vector2.left)
+            {
+                this.animator.SetBool("back", false);
+                this.gameObject.transform.localScale = left;
+            }
+            else if (this.movement.direction == Vector2.right)
+            {
+                this.movement.SetDirection(Vector2.right);
+                this.gameObject.transform.localScale = right;
+            }
         }
-        else
-        {
-            this.proxdirecao = direcao;
-        }
-    }
-
-    public bool Ocupado(Vector2 direcao)
-    {
-        RaycastHit2D ray = Physics2D.BoxCast(this.transform.position, Vector2.one * 0.75f, 0.0f, direcao, 1.5f, paredes);
-        return ray.collider!=null;
     }
 }
