@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3fc1e6b1c9b91fe43a71e4d712f23494
+guid: 7cf9e73d326b49043877688524a1a7af
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6395689632129509259
-    second: lv3tile_0
+      213: 2053701634610750884
+    second: building06_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lv3tile_0
+      name: building06_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 20
-        height: 20
+        x: 5
+        y: 3
+        width: 30
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 57895475a22fd37a0800000000000000
-      internalID: -6395689632129509259
+      spriteID: 4a5ec9571c6308c10800000000000000
+      internalID: 2053701634610750884
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lv3tile_0: -6395689632129509259
+      building06_0: 2053701634610750884
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

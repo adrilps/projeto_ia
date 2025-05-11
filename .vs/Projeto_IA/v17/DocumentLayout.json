@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\belelu\\Documents\\projeto_ia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A0679ABC-F8D0-BF56-A80B-9846C3F7CCEB}|Assembly-CSharp.csproj|c:\\users\\belelu\\documents\\projeto_ia\\assets\\scripts\\pellet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0679ABC-F8D0-BF56-A80B-9846C3F7CCEB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pellet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A0679ABC-F8D0-BF56-A80B-9846C3F7CCEB}|Assembly-CSharp.csproj|C:\\Users\\belelu\\Documents\\projeto_ia\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0679ABC-F8D0-BF56-A80B-9846C3F7CCEB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0679ABC-F8D0-BF56-A80B-9846C3F7CCEB}|Assembly-CSharp.csproj|C:\\Users\\belelu\\Documents\\projeto_ia\\assets\\scripts\\powerpellet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0679ABC-F8D0-BF56-A80B-9846C3F7CCEB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\powerpellet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0679ABC-F8D0-BF56-A80B-9846C3F7CCEB}|Assembly-CSharp.csproj|c:\\users\\belelu\\documents\\projeto_ia\\assets\\scripts\\pellet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0679ABC-F8D0-BF56-A80B-9846C3F7CCEB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pellet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A0679ABC-F8D0-BF56-A80B-9846C3F7CCEB}|Assembly-CSharp.csproj|C:\\Users\\belelu\\Documents\\projeto_ia\\assets\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0679ABC-F8D0-BF56-A80B-9846C3F7CCEB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A0679ABC-F8D0-BF56-A80B-9846C3F7CCEB}|Assembly-CSharp.csproj|c:\\users\\belelu\\documents\\projeto_ia\\assets\\scripts\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A0679ABC-F8D0-BF56-A80B-9846C3F7CCEB}|Assembly-CSharp.csproj|C:\\Users\\belelu\\Documents\\projeto_ia\\assets\\scripts\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0679ABC-F8D0-BF56-A80B-9846C3F7CCEB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0679ABC-F8D0-BF56-A80B-9846C3F7CCEB}|Assembly-CSharp.csproj|c:\\users\\belelu\\documents\\projeto_ia\\assets\\scripts\\powerpellet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0679ABC-F8D0-BF56-A80B-9846C3F7CCEB}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\powerpellet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Pellet.cs",
               "DocumentMoniker": "C:\\Users\\belelu\\Documents\\projeto_ia\\Assets\\Scripts\\Pellet.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pellet.cs",
@@ -47,7 +47,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "PowerPellet.cs",
               "DocumentMoniker": "C:\\Users\\belelu\\Documents\\projeto_ia\\Assets\\Scripts\\PowerPellet.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PowerPellet.cs",
@@ -60,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Movement.cs",
               "DocumentMoniker": "C:\\Users\\belelu\\Documents\\projeto_ia\\Assets\\Scripts\\Movement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Movement.cs",
@@ -68,12 +68,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Movement.cs",
               "ViewState": "AgIAAD4AAAAAAAAAAAAqwEgAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T23:47:07.704Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T23:47:07.704Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "character.cs",
               "DocumentMoniker": "C:\\Users\\belelu\\Documents\\projeto_ia\\Assets\\Scripts\\character.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\character.cs",
@@ -81,18 +80,17 @@
               "RelativeToolTip": "Assets\\Scripts\\character.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T18:15:22.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T18:15:22.453Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\belelu\\Documents\\projeto_ia\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
               "ToolTip": "C:\\Users\\belelu\\Documents\\projeto_ia\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAmwF0AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAkwDMAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T17:33:38.714Z",
               "EditorCaption": ""

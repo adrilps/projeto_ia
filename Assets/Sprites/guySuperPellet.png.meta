@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3fc1e6b1c9b91fe43a71e4d712f23494
+guid: 1a8a404a8ff693e46849a64bda357bdd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6395689632129509259
-    second: lv3tile_0
+      213: 3105737449116843393
+    second: guySuperPellet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lv3tile_0
+      name: guySuperPellet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 20
-        height: 20
+        x: 3
+        y: 2
+        width: 13
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 57895475a22fd37a0800000000000000
-      internalID: -6395689632129509259
+      spriteID: 18dbc3c41cbc91b20800000000000000
+      internalID: 3105737449116843393
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lv3tile_0: -6395689632129509259
+      guySuperPellet_0: 3105737449116843393
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
