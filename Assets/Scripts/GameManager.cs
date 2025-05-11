@@ -1,6 +1,7 @@
  using System;
+using NUnit.Framework;
 using UnityEngine;
-using UnityEngine.SceneManagement
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -88,7 +89,11 @@ public class GameManager : MonoBehaviour
         if (!HasRemainingPellets())
         {
             this.character.gameObject.SetActive(false);
-            Invoke(nameof(NewRound), 3.0f);
+            if(MainMenu.level < 4)
+            {
+            SceneManager.LoadSceneAsync(++MainMenu.level);
+            }
+        
 
         }
     }
