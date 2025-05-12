@@ -3,8 +3,6 @@ using UnityEngine;
 [RequireComponent(typeof(Movement))]
 public class Character : MonoBehaviour
 {
-    [SerializeField]
-    private AnimatedSprite deathSequence;
     private SpriteRenderer spriteRenderer;
     private CircleCollider2D circleCollider;
     private Movement movement;
@@ -12,6 +10,8 @@ public class Character : MonoBehaviour
     private Vector3 right = new Vector3(1f, 1f, 1f);
     private Vector3 left = new Vector3(-1f, 1f, 1f);
     private Vector2 direction = Vector2.zero;
+    private Vector3 startingPosition;
+    private Rigidbody2D rb;
 
     private void Awake()
     {
@@ -19,7 +19,8 @@ public class Character : MonoBehaviour
         circleCollider = GetComponent<CircleCollider2D>();
         movement = GetComponent<Movement>();
         animator = GetComponent<Animator>();
-        
+        rb = GetComponent<Rigidbody2D>();
+        startingPosition = transform.position;
     }
 
     private void Update()
@@ -37,8 +38,7 @@ public class Character : MonoBehaviour
             movement.SetDirection(Vector2.right);
         }
 
-
-         if (this.movement.direction != this.direction)
+        if (this.movement.direction != this.direction)
         {
             this.direction = this.movement.direction;
             if (this.movement.direction == Vector2.up)
@@ -67,19 +67,10 @@ public class Character : MonoBehaviour
         enabled = true;
         spriteRenderer.enabled = true;
         circleCollider.enabled = true;
-        deathSequence.enabled = false;
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
         movement.ResetState();
+        transform.position = startingPosition;
         gameObject.SetActive(true);
     }
-
-    public void DeathSequence()
-    {
-        enabled = false;
-        spriteRenderer.enabled = false;
-        circleCollider.enabled = false;
-        movement.enabled = false;
-        deathSequence.enabled = true;
-        deathSequence.Restart();
-    }
-
 }

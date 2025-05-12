@@ -28,11 +28,11 @@ public static class GreedySearch
                 List<Node> finalPath = ReconstructPath(current);
 
                 // Log para debug
-                Debug.Log("Caminho encontrado (Greedy):");
+                /*Debug.Log("Caminho encontrado (Greedy):");
                 foreach (Node node in finalPath)
                 {
                     Debug.Log($"→ {node.name} ({node.transform.position})");
-                }
+                }*/
 
                 return finalPath;
             }

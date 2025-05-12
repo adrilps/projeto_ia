@@ -17,6 +17,12 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         startingPosition = transform.position;
+        
+        // Configurar o Rigidbody2D corretamente
+        rb.gravityScale = 0f;
+        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     private void Start()
@@ -29,7 +35,11 @@ public class Movement : MonoBehaviour
         speedMultiplier = 1f;
         direction = initialDirection;
         nextDirection = Vector2.zero;
-        transform.position = startingPosition;
+        
+        // Resetar o Rigidbody2D
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+        rb.position = startingPosition;
         rb.bodyType = RigidbodyType2D.Dynamic;
         enabled = true;
     }
@@ -45,9 +55,10 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!enabled) return;
+        
         Vector2 position = rb.position;
         Vector2 translation = speed * speedMultiplier * Time.fixedDeltaTime * direction;
-
         rb.MovePosition(position + translation);
     }
 

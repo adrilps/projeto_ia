@@ -27,11 +27,11 @@ public static class AStar
                 List<Node> finalPath = ReconstructPath(current);
 
                 // Log para debug
-                Debug.Log("Caminho encontrado:");
+                /*Debug.Log("Caminho encontrado:");
                 foreach (Node node in finalPath)
                 {
                     Debug.Log($"→ {node.name} ({node.transform.position})");
-                }
+                }*/
 
                 return finalPath;
             }
