@@ -9589,7 +9589,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 141144295272810526, guid: 1e6376709c574994b8fd4320ceb88c57, type: 3}
       propertyPath: gizmosRadius
-      value: 1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1165451975511061591, guid: 1e6376709c574994b8fd4320ceb88c57, type: 3}
       propertyPath: target
@@ -9922,7 +9922,8 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6610021040158497251, guid: 0e6d48706f9c3894ab9d19dbd53fb222, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
