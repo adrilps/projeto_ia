@@ -120,16 +120,20 @@ public class GameManager : MonoBehaviour
         if (!HasRemainingPellets())
         {
             player.gameObject.SetActive(false);
-            // Avança para o tutorial da próxima fase
-            int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
-            if (nextScene < SceneManager.sceneCountInBuildSettings)
-            {
-                SceneManager.LoadScene(nextScene);
-            }
-            else
-            {
-                SceneManager.LoadScene(0); // Volta para o menu principal se não houver próxima fase
-            }
+            int current = SceneManager.GetActiveScene().buildIndex;
+            int next = 0;
+
+            // Se está em um tutorial, vai para o level correspondente
+            if (current == 2) next = 5;
+            else if (current == 3) next = 6;
+            else if (current == 4) next = 7;
+            // Se está em um level, vai para o próximo tutorial (se houver)
+            else if (current == 5) next = 3;
+            else if (current == 6) next = 4;
+            // Se terminou o último level, vai para o menu ou parabéns
+            else if (current == 7) next = 0; // ou uma cena de parabéns se quiser
+
+            SceneManager.LoadScene(next);
         }
     }
 
