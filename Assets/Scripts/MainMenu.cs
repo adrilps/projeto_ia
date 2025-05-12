@@ -5,7 +5,12 @@ public class MainMenu : MonoBehaviour
 {
     public static int level = 0;
 
-    public void LevelSelector(){
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadSceneAsync(0);
+    }
+    public void LevelSelector()
+    {
         SceneManager.LoadSceneAsync(1);
     }
     public void SelectLevel1()
